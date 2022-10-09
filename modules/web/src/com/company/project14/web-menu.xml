@@ -3,5 +3,6 @@
     <menu id="application-project14" insertBefore="administration" caption="mainMsg://menu_config.application-project14">
         <item screen="project14_Report.browse" caption="mainMsg://menu_config.project14_Report.browse"/>
         <item screen="project14_ReportType.browse" caption="mainMsg://menu_config.project14_ReportType.browse"/>
+        <item screen="project14_MakeReport" caption="mainMsg://menu_config.project14_MakeReport"/>
     </menu>
 </menu-config>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://makeReport.caption"
+        messagesPack="com.company.project14.web.screens">
+    <data>
+        <collection id="reportsDc" class="com.company.project14.entity.Report">
+            <view extends="_local"/>
+            <loader id="reportsDl">
+                <query>
+                    <![CDATA[select e from project14_Report e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="reportTypeDc"
+                    class="com.company.project14.entity.ReportType">
+            <view extends="_local"/>
+            <loader id="reportTypeDl">
+                <query>
+                    <![CDATA[select e from project14_ReportType e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <split id="makeRepSplitPanel" orientation="horizontal" pos="20" height="100%" width="100%">
+            <vbox id="chooseRepVBox" spacing="true" height="100%">
+                <lookupField id="reportTypeLUField"
+                             caption="msg://reportTypeLUField.caption"
+                             optionsContainer="reportTypeDc"
+                             property="ReportType"/>
+            </vbox>
+            <vbox id="setParametersVBox" spacing="true" height="100%"/>
+        </split>
+    </layout>
+</window>
