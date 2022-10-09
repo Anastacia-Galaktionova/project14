@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://reportEdit.caption"
+        focusComponent="form"
+        messagesPack="com.company.project14.web.screens.report">
+    <data>
+        <instance id="reportDc"
+                  class="com.company.project14.entity.Report">
+            <view extends="_local">
+                <property name="reportType" view="_minimal"/>
+            </view>
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="reportDc">
+            <column width="350px">
+                <textField id="reportNameField" property="reportName"/>
+                <pickerField id="reportTypeField" property="reportType">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                        <action id="clear" type="picker_clear"/>
+                    </actions>
+                </pickerField>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>
