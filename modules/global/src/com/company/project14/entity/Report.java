@@ -2,7 +2,7 @@ package com.company.project14.entity;
 
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
-
+//comm for testing issue
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
